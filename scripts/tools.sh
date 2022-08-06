@@ -18,12 +18,12 @@ install() {
         echo -e "vtProxy已在运行中，请选6.停止->2.卸载->1.安装" && exit 1
     fi
 
-    $cmd update -y
-    $cmd install curl wget screen -y
+    $cmd apt update -y
+    $cmd apt install curl wget screen -y
     mkdir /root/vtProxy
-	chmod 777 /root/vtProxy
+    chmod 777 /root/vtProxy
 
-    wget https://raw.githubusercontent.com/victorMinerProxy/vtProxy/master/vtProxy -O /root/vtProxy/vtProxy
+    wget https://raw.githubusercontent.com/victorMinerProxy/vtMinerProxy/master/vtProxy -O /root/vtProxy/vtProxy
 	
 	
     chmod 777 /root/vtProxy/vtProxy
